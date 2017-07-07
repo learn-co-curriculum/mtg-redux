@@ -49,15 +49,12 @@ class App extends Component {
         }
       })
   }
-  search(){
-    
-  }
 
   render () {
     return (
         <Router history={history}>
           <div>
-            <Navigation auth={this.state.auth} cardSearch={} logout={this.logout.bind(this)}/>
+            <Navigation auth={this.state.auth} logout={this.logout.bind(this)}/>
             <Route exact path='/' render={()=>{
               return this.state.auth.isLoggedIn ? <Home /> : <Redirect to="/login"/>
             }} />
