@@ -6,10 +6,12 @@ import { Segment } from 'semantic-ui-react'
 
 const CardsRouter = () => {
   return (
-    <Segment>
-      <Route exact path='/cards' component={CardList} />
+    <div>
+      <Segment>
+        <Route exact path='/cards' component={CardList} />
+      </Segment>
       <Route path='/cards/:cardId' component={CardShow} />
-    </Segment>
+    </div>
   )
 }
 
