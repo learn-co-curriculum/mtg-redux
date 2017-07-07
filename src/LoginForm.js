@@ -13,7 +13,12 @@ class LoginForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange = (e, { name, value }) => this.setState({ [name]: value })
+  handleChange (e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+  // handleChange = (e, { name, value }) => this.setState({ [name]: value })
 
   handleSubmit (e) {
     e.preventDefault()
