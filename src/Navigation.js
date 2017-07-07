@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { Menu, Input} from 'semantic-ui-react'
-const Navigation = ({logout, cardSearch}) => {
+const Navigation = ({logout}) => {
   const activeItem = 'home'
 
   return (
@@ -12,7 +12,7 @@ const Navigation = ({logout, cardSearch}) => {
       <Menu.Item name='logout' onClick={logout} />
       <Menu.Menu position='right'>
         <Menu.Item>
-          <Input icon='search' onSubmit={cardSearch} placeholder='Search...' />
+          <Input icon='search' placeholder='Search...' />
         </Menu.Item>
       </Menu.Menu>
     </Menu>
