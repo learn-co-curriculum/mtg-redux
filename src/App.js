@@ -18,7 +18,25 @@ class App extends Component {
       user: {}
     }
   }
+  componentWillUpdate(){
+    console.log('Updating app');
+      if (localStorage.getItem('jwt')) {
+       Auth.currentUser()
+         .then(user => {
+           if (!user.error) {
+             console.log("fetch user");
+             this.setState({
+               auth: {
+                 isLoggedIn: true,
+                 user: user
+               }
+             })
+           }
+         })
+     }
+  }
   componentWillMount(){
+    console.log('Mounting app');
       if (localStorage.getItem('jwt')) {
        Auth.currentUser()
          .then(user => {
