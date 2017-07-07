@@ -40,6 +40,7 @@ class App extends Component {
       if (localStorage.getItem('jwt')) {
        Auth.currentUser()
          .then(user => {
+           console.log("from current user",user)
            if (!user.error) {
              console.log("fetch user");
              this.setState({
