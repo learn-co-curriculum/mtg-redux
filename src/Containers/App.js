@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
-import Navigation from './Navigation'
-import Home from './Home'
-import CardsRouter from './CardsRouter'
+import Navigation from '../Components/Navigation'
+import Home from '../Components/Home'
+import CardsRouter from '../Routers/CardsRouter'
 import LoginForm from './LoginForm'
-import Auth from './authAdapter'
+import Auth from '../Adapters/authAdapter'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 const history = createBrowserHistory()
-
+//Auth from redux
 class App extends Component {
 
   state = {

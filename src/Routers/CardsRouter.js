@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import CardList from './CardList'
-import CardShow from './CardShow'
+import CardList from '../Containers/CardList'
+import CardShow from '../Components/CardShow'
 import { Segment } from 'semantic-ui-react'
 
 const CardsRouter = () => {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import CardFactory from './CardFactory'
 import Card from './Card'
+import { connect } from 'react-redux'
+import { getCard } from '../Actions-Creators/index'
 
 class CardShow extends Component {
   loading () {
@@ -18,5 +19,17 @@ class CardShow extends Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    card: state
+  }
+}
 
-export default CardFactory(CardShow)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchCard: (id) => {
+      dispatch(getCard(id))
+    }
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CardShow)

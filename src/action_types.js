@@ -1,0 +1,4 @@
+export const DID_GET_CARDS = 'DID_GET_CARDS'
+export const DID_GET_CARD = 'DID_GET_CARD'
+export const DID_CREATE_CARD = 'DID_CREATE_CARD'
+export const DID_DELETE_CARD = 'DID_DELETE_CARD'
